@@ -9,8 +9,8 @@ def main():
         people.append(str(sys.argv[i + 2]))
     for i in range(int(math.floor(len(people) / groupSize))):
         print("Group " + str(i + 1) + ":")
-        print(people.pop(random.randrange(len(people))))
-        print(people.pop(random.randrange(len(people))))
+        for i in range(groupSize):
+            print(people.pop(random.randrange(len(people))))
     for i in range(len(people)):
         print(people.pop(0))
 
